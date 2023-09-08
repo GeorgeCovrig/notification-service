@@ -1,0 +1,26 @@
+<div>
+  <br />
+  <br />
+  <br />
+  <input type="button" (click)="connectToWebSocket()" value="Connect to websocket">
+
+
+</div>
+<br />
+<div>
+  <form [formGroup]="topicForm">
+    <label>Topic to connect on:</label>
+    <br />
+    <input type="text" id="input-topic" formControlName="topic">
+  </form>
+</div>
+
+<div>
+  <br />
+  Messages:
+</div>
+<br />
+
+<div *ngFor="let val of messages">
+  {{val}}
+</div>
